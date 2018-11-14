@@ -283,7 +283,12 @@ class Welcome extends CI_Controller
             $this->load->view('signup');
             $this->load->view('temp/footer');
         } else {
-            $_SESSION['user'] = array('name' => $_POST['name'], 'email' => $_POST['email'], 'password' => $_POST['password'], 'access' => 1);
+            $_SESSION['user'] = array(
+                'name' => $_POST['name'], 
+                'email' => $_POST['email'], 
+                'password' => $_POST['password'], 
+                'access' => 1);
+                
             if ($_POST['password'] != $_POST['password-confirmation']) {
                 $this->load->view('temp/header');
                 echo "<center>The passwords do not match, please try again!</center>";
@@ -394,5 +399,14 @@ class Welcome extends CI_Controller
             $this->load->view('checkout');
             $this->load->view('temp/footer');
         }
+    }
+
+    public function message_sent() 
+    {
+        $data['form_info'] = $_POST['form_info'];
+        
+        $this->load->view('temp/header-user');
+        $this->load->view('mailer', $data);
+        $this->load->view('temp/footer');
     }
 }

@@ -18,19 +18,21 @@
       <!-- In order to set the email address and subject line for the Checkout form go to the bin/contact_me.php file. -->
       <div class="row">
         <div class="col-lg-8 mb-4">
-          <form name="sentMessage" id="contactForm" novalidate>
+          <form name="sentMessage" id="contactForm" method="post" action="message_sent" novalidate>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Check the information below and make sure that it is all correct, then click send:</label>
-                <textarea rows="10" cols="100" 
-                class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none">
+                <textarea rows="10" cols="100" name="form_info" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none">
                 
                 <?php 
 
                   //&#013; &#010; for breaking in the textarea
                   
+                  echo "&#013;Please write a short description of your website below:";
+                  echo "&#013;================================&#013;&#013;&#013;";
+
                   echo "&#013;Website Description";
-                  echo "&#013;===================&#013;";
+                  echo "&#013;================================&#013;";
 
                   $x = 0;
 
@@ -39,7 +41,7 @@
                     $x++;
                   }
 
-                  echo "&#013;&#013;PRICE: " . $_SESSION['price'];
+                  echo "&#013;&#013;Price: €" . $_SESSION['price'];
 
                 ?>
                 
