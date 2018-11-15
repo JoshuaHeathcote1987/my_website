@@ -27,6 +27,8 @@
                 <?php 
 
                   //&#013; &#010; for breaking in the textarea
+
+                  // Change this to a form and have a back button if there is a mistake.
                   
                   echo "&#013;Please write a short description of your website below:";
                   echo "&#013;================================&#013;&#013;&#013;";

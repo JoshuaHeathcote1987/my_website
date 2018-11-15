@@ -376,35 +376,16 @@ class Welcome extends CI_Controller
         } else {  
             $data['query'] = $this->Welcome_model->Read('products');
             $this->load->view('temp/header-user');
-            $this->load->view('checkout', $data);
-            $this->load->view('temp/footer');
-        }
-    }
-
-    public function checkout() 
-    {
-        if (isset($_SESSION['user']['access'])) {
-            $x = (int) $_SESSION['user']['access'];
-            if ($x > 0) {
-                $this->load->view('temp/header-user');
-                $this->load->view('checkout');
-                $this->load->view('temp/footer');
-            } else if ($x === 0) {
-                $this->load->view('temp/header-admin');
-                $this->load->view('checkout');
-                $this->load->view('temp/footer');
-            }
-        } else {
-            $this->load->view('temp/header');
-            $this->load->view('checkout');
+            $this->load->view('checkout_temp', $data);
             $this->load->view('temp/footer');
         }
     }
 
     public function message_sent() 
     {
-        $data['form_info'] = $_POST['form_info'];
-        
+        $data['purchase'] = array('name' => $_POST['name'], 'email' => $_POST['email'], 'product1' => $_POST['0'], 'product2' => $_POST['1'], 'price' => $_POST['price'], 'description' => $_POST['description']);
+        $data['query'] = $this->Welcome_model->Read('products');
+
         $this->load->view('temp/header-user');
         $this->load->view('mailer', $data);
         $this->load->view('temp/footer');
