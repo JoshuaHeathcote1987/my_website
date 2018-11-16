@@ -50,9 +50,11 @@
                     
                 </div> 
 
-                <label>Description</label>
-                <div class="form-group">
-                <textarea name="description" rows="4" cols="80"></textarea>      
+                <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Description</label>
+                    <textarea name="description" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                  </div>
                 </div>
 
               </div>

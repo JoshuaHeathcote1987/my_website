@@ -339,8 +339,6 @@ class Welcome extends CI_Controller
             {
                 $data['query'] = $this->Welcome_model->Read('products');
                 $data['price'] = 0;
-                
-
                 if ($_SERVER['REQUEST_METHOD'] != 'POST') 
                 {
                     
@@ -353,20 +351,15 @@ class Welcome extends CI_Controller
                     for ($x = 0; $x < count($data['query']->result()); $x++) {
                         $post_array[$x] = $_POST[$x];
                     }
-
                     $x = 0;
-    
                     foreach ($data['query']->result() as $row) {
                         $data['price'] += $post_array[$x] * $row->price;
                         $x++;
                     }
-
                     $data['count'] = array($_POST[0], $_POST[1]);
-    
                     $this->load->view('temp/header-user');
                     $this->load->view('cart', $data);
                     $this->load->view('temp/footer');
-
                     $_SESSION['count'] = array($_POST[0], $_POST[1]);
                     $_SESSION['price'] = $data['price'];
                 }

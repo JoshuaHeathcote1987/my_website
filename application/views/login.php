@@ -15,7 +15,7 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
                         <input type="text" name="email" class="form-control" id="email"
-                                placeholder="you@example.com" value="123@123.com" required autofocus>
+                                placeholder="you@example.com" value="" required autofocus>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
                         <input type="password" name="password" class="form-control" id="password"
-                                placeholder="Password" value="123" required>
+                                placeholder="Password" value="" required>
                     </div>
                 </div>
             </div>
