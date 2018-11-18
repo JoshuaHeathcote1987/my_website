@@ -16,21 +16,19 @@
       <div class="row">
 
         <!-- Blog Entries Column -->
+        
         <div class="col-md-8">
-
+        <?php foreach($query->result() as $row) { ?>
           <!-- PHP beginning for Blog Posts -->
-          <?php for ($x = 0; $x < 10; $x++) { ?>
+          
 
           <div class="card mb-4">
-            <img class="card-img-top" src="<?php echo base_url('images/my_pattern.png') ?>" alt="Card image cap">
+            <img class="card-img-top" src="" alt="Card image cap">
             <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <h2 class="card-title"><?php echo $row->head ?></h2>
+              <p class="card-text"><?php echo $row->body ?></p>
               <a href="#" class="btn btn-primary">Read More &rarr;</a>
             </div>
-            <div class="card-footer text-muted">
-              Posted on January <?php echo $x ?>, 2017 by
-              <a href="#">Start Bootstrap</a>
             </div>
           </div>
 

@@ -35,19 +35,16 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('welcome/pricing') ?>">Services</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('welcome/contact') ?>">Contact</a>
-            </li>
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Other Pages
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="<?php echo base_url('welcome/shopping_cart') ?>">Cart</a>  
-                <a class="dropdown-item" href="<?php echo base_url('welcome/blog') ?>">Blog</a>             
-                <a class="dropdown-item" href="<?php echo base_url('welcome/portfolio') ?>">Portfolio</a>
-                <a class="dropdown-item" href="<?php echo base_url('welcome/faq') ?>">FAQ</a>
+                <!-- <a class="dropdown-item" href="<?php // echo base_url('welcome/shopping_cart') ?>">Cart</a>   -->
+                <a class="dropdown-item" href="<?php echo base_url('welcome/bloghomeone') ?>"><strike>Blog</strike></a>             
+                <a class="dropdown-item" href="<?php echo base_url('welcome/portfolio') ?>"><strike>Portfolio</strike></a>
+                <a class="dropdown-item" href="<?php echo base_url('welcome/faq') ?>"><strike>FAQ</strike></a>
                 <a class="dropdown-item" href="<?php echo base_url('welcome/logout') ?>">logout</a>
               </div>
               

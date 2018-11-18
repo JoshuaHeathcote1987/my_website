@@ -30,7 +30,7 @@
                             <div class="col-4 col-sm-4 col-md-4">
                                 <div class="quantity">
     
-                                    <input name="<?php echo $x ?>" type="number" step="1" max="99" min="0" value="<?php echo $count[$x]; ?>" class="qty"
+                                    <input name="<?php echo $x ?>" type="number" step="1" max="99" min="0" value="<?php echo htmlspecialchars($count[$x]) ?>" placeholder="0" class="qty"
                                            size="4">
 
                                 </div>
@@ -55,7 +55,7 @@
                 <div class="pull-right" style="margin: 10px">
                     <input type="submit" class="btn btn-success pull-right" name="checkout" value="Checkout">
                     <div class="pull-right" style="margin: 5px">
-                        Total price: <b>€<?php echo $price ?></b>
+                        Total price: <b>€<?php echo htmlspecialchars($price) ?></b>
                     </div>
                 </div>
             </div>

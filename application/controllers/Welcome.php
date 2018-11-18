@@ -85,7 +85,8 @@ class Welcome extends CI_Controller
     {
         // Not yet finished
 
-        $data['query'] = $this->Welcome_model->Read('users');
+        $data['query'] = $this->Welcome_model->Read('blog');
+        
         $this->load->view('temp/header');
         $this->load->view('blog-home-1', $data);
         $this->load->view('temp/footer');
@@ -311,9 +312,26 @@ class Welcome extends CI_Controller
         }
     }
 
+    public function cart() 
+    {
+        $query              = $this->Welcome_model->Read('products');
+        $query_final        = $query->result();
+        $single_product     = array();
+
+        foreach($_POST as $key => $value) 
+        { 
+            $temp_product   = $this->Welcome_model->Read_single($key);
+        }
+
+        $data['product']    = $temp_product->result();
+
+        $this->load->view('temp/header-user');
+        $this->load->view('contact', $data);
+        $this->load->view('temp/footer');
+    }
+
     public function users()
     {
-        // Attention
         if (isset($_SESSION['user']['access'])) {
             $x = (int) $_SESSION['user']['access'];
             if ($x > 0) {

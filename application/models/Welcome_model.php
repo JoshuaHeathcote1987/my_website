@@ -34,7 +34,7 @@ class Welcome_model extends CI_Model
 
     public function Read_single($id)
     {
-        $query = $this->db->query("SELECT * FROM `products` WHERE `id` = 1");
+        $query = $this->db->query("SELECT * FROM `products` WHERE `id` = $id");
         return $query;
     }
 

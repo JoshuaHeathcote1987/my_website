@@ -45,7 +45,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
                 <a class="dropdown-item" href="<?php echo base_url('welcome/blogcreate') ?>">Blog Creation</a>
-                <a class="dropdown-item" href="<?php echo base_url('welcome/blog') ?>">Blog</a>
+                <a class="dropdown-item" href="<?php echo base_url('welcome/bloghomeone') ?>">Blog</a>
                 <a class="dropdown-item" href="<?php echo base_url('welcome/portfoliocreate') ?>">Portfolio Creation</a>                
                 <a class="dropdown-item" href="<?php echo base_url('welcome/portfolio') ?>">Portfolio</a>
                 <a class="dropdown-item" href="<?php echo base_url('welcome/users') ?>">Users</a>

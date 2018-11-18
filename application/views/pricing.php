@@ -14,11 +14,12 @@
     </ol>
 
     <!-- Content Row -->
+    <form action="cart" method="POST">
     <div class="row">
     <?php $x = 0; ?>
     <?php foreach($query->result() as $row) { ?>
-      <?php $x++; ?>
-      <div class="col-lg-6 mb-4">
+      
+      <div class="col-lg-4 mb-4">
         <div class="card h-100">
           <h3 class="card-header"><?php echo $row->name ?></h3>
           <div class="card-body">
@@ -28,14 +29,17 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><?php echo $row->description ?></li>
             <li class="list-group-item">
-              <a href="shopping_cart" name="<?php echo $x ?>" class="btn btn-primary">Sign Up!</a>
+            <input type="submit" name="<?php echo $x ?>" value="More..">
+            <?php $x++; ?>
             </li>
           </ul>
         </div>
       </div>
+      
 
 
     <?php } ?>
+    </form>
     </div>
     
     <!-- /.row -->

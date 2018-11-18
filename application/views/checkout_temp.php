@@ -24,12 +24,12 @@
 
                 <div class="form-group">
                     <label>Name</label>
-                    <input name="name" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo $_SESSION['user']['name'] ?>">
+                    <input name="name" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo htmlspecialchars($_SESSION['user']['name']) ?>">
                 </div>
 
                 <div class="form-group">
                     <label>Email address</label>
-                    <input name="email" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo $_SESSION['user']['email'] ?>">
+                    <input name="email" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo htmlspecialchars($_SESSION['user']['email']) ?>">
                     
                 </div>   
 
@@ -37,7 +37,7 @@
 
                 <div class="form-group">
                     <label><?php echo $row->name ?></label>
-                    <input name="<?php echo $x ?>" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo $_SESSION['count'][$x] ?>">
+                    <input name="<?php echo $x ?>" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo htmlspecialchars($_SESSION['count'][$x]) ?>">
                     
                 </div>
                 <?php $x++ ?>
@@ -46,7 +46,7 @@
 
                   <div class="form-group">
                   <label>Price</label>
-                  <input name="price" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo $_SESSION['price'] ?>">
+                  <input name="price" type="email" class="form-control" aria-describedby="" placeholder="" value="<?php echo htmlspecialchars($_SESSION['price']) ?>">
                     
                 </div> 
 

@@ -42,35 +42,46 @@
         </div>
       </div>
       <!-- /.row -->
+      <?php foreach($product as $row) { ?>
 
-      <!-- Contact Form -->
-      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
       <div class="row">
         <div class="col-lg-8 mb-4">
           <h3>Send us a Message</h3>
-          <form name="sentMessage" id="contactForm" novalidate>
+          <form name="sentMessage" id="contactForm" action="message_sent" method="POST" novalidate>
             <div class="control-group form-group">
               <div class="controls">
                 <label>Full Name:</label>
-                <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                <input type="text" class="form-control" id="name" value="<?php echo htmlspecialchars($_SESSION['user']['name']) ?>">
                 <p class="help-block"></p>
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
-                <label>Phone Number:</label>
-                <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-              </div>
-            </div>
-            <div class="control-group form-group">
-              <div class="controls">
                 <label>Email Address:</label>
-                <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                <input type="email" class="form-control" id="email" value="<?php echo htmlspecialchars($_SESSION['user']['email']) ?>">
               </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
-                <label>Message:</label>
+                <label>Product Name:</label>
+                <input type="email" class="form-control" id="email" value="<?php echo htmlspecialchars($row->name) ?>">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Product Price:</label>
+                <input type="email" class="form-control" id="email" value="<?php echo htmlspecialchars($row->price) ?>">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Product Description:</label>
+                <input type="email" class="form-control" id="email" value="<?php echo htmlspecialchars($row->description) ?>">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Description:</label>
                 <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
               </div>
             </div>
@@ -82,6 +93,7 @@
 
       </div>
       <!-- /.row -->
+      <?php } ?>
 
     </div>
     <!-- /.container -->
