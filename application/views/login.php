@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 25px; margin-bottom: 25px;">
+<div class="container" style="margin-top: 100px; margin-bottom: 25px;">
     <form class="form-horizontal" role="form" method="POST" action="<?php echo htmlspecialchars(base_url('welcome/login')); ?>">
         <div class="row">
             <div class="col-md-3"></div>

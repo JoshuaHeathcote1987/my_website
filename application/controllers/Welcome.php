@@ -83,9 +83,7 @@ class Welcome extends CI_Controller
 
     public function bloghomeone()
     {
-        // Not yet finished
-
-        $data['query'] = $this->Welcome_model->Read('blog');
+        $data['post'] = $this->Welcome_model->Read('blog');
         
         $this->load->view('temp/header');
         $this->load->view('blog-home-1', $data);
@@ -152,7 +150,7 @@ class Welcome extends CI_Controller
         $this->load->view('temp/footer');
     }
 
-    public function portfolioonecol()
+    public function portfolio()
     {
         $this->load->view('temp/header');
         $this->load->view('portfolio-1-col');
@@ -234,7 +232,6 @@ class Welcome extends CI_Controller
         if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             $this->load->view('temp/header');
             $this->load->view('login');
-            $this->load->view('temp/footer');
         } else {
             if (!isset($_SESSION['user'])) // Is the user logged in?
             {

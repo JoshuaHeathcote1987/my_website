@@ -1,5 +1,5 @@
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" style="margin-top: 60px; margin-bottom: 25px;">
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">About

@@ -1,5 +1,5 @@
   <!-- Page Content -->
-  <div class="container">
+  <div class="container" style="margin-top: 60px; margin-bottom: 25px;">
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Pricing
@@ -29,7 +29,7 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><?php echo $row->description ?></li>
             <li class="list-group-item">
-            <input type="submit" name="<?php echo $x ?>" value="More..">
+            <input class="btn btn-dark" type="submit" name="<?php echo $x ?>" value="More..">
             <?php $x++; ?>
             </li>
           </ul>

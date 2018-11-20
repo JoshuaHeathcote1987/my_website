@@ -1,6 +1,6 @@
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-primary" style="bottom: 0;">
       <div class="container">
         <p class="m-0 text-center text-white">Page rendered in <strong>{elapsed_time}</strong></p>
         <p class="m-0 text-center text-white"><?php echo date("Y/m/d"); ?></p>

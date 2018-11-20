@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cote Heath</title>
+    <title>Cote-Heath</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.css'); ?>" rel="stylesheet">
@@ -21,9 +21,9 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
-        <a class="navbar-brand" href="<?php echo base_url('welcome/index') ?>">Cote Heath</a>
+        <a class="navbar-brand" href="<?php echo base_url('welcome/index') ?>">Cote-Heath</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
